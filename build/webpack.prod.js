@@ -8,7 +8,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = WebpackMerge(webpackConfig, {
     mode: 'production',
-    devtool: 'cheap-module-source-map',
+    devtool: '#source-map',
     optimization: {
         minimizer: [
             // new UglifyJsPlugin({//压缩js

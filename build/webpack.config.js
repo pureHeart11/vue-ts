@@ -40,7 +40,7 @@ module.exports = {
             template: "main/template.html",
             filename: 'index.html',
             inject: true,
-            oss_path: 'http://gos-test.oss-cn-hangzhou.aliyuncs.com/base_boss',
+            // oss_path: 'http://gos-test.oss-cn-hangzhou.aliyuncs.com/base_boss',
             // bundleName: path.join(__dirname, "./static/js/vendor.dll.js")
             // bundleName: "./static/js/vendor.dll.j"
         }),
@@ -55,13 +55,13 @@ module.exports = {
             threadPool: happyThreadPool, //共享进程池
             loaders: ['babel-loader?presets[]=es2015']
         }),
-        new webpack.DllReferencePlugin({
-            context: __dirname,
-            manifest: require('./vendor-manifest.json')
-        }),
-        new CopyWebpackPlugin([ // 拷贝生成的文件到dist目录 这样每次不必手动去cv
-            { from: 'static/js', to: 'static/js' }
-        ])
+        // new webpack.DllReferencePlugin({
+        //     context: __dirname,
+        //     manifest: require('./vendor-manifest.json')
+        // }),
+        // new CopyWebpackPlugin([ // 拷贝生成的文件到dist目录 这样每次不必手动去cv
+        //     { from: 'static/js', to: 'static/js' }
+        // ])
     ],
     module: {
         rules: [
@@ -93,12 +93,12 @@ module.exports = {
                 },
                 include: [resolve('main')]
             },
-            {
-                test: /\.ts$/,
-                exclude: /node_modules/,
-                enforce: 'pre',
-                loader: 'tslint-loader'
-            },
+            // {
+            //     test: /\.ts$/,
+            //     exclude: /node_modules/,
+            //     enforce: 'pre',
+            //     loader: 'tslint-loader'
+            // },
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader',
