@@ -9,7 +9,7 @@ module.exports = WebpackMerge(webpackConfig, {
     mode: 'development',
     devtool: 'cheap-module-eval-source-map',
     devServer: {
-        port: 3000,
+        port: 8088,
         hot: true,
         host: HOST,
         quiet: true,
@@ -24,7 +24,7 @@ module.exports = WebpackMerge(webpackConfig, {
         new Webpack.HotModuleReplacementPlugin(),
         new FriendlyErrorsPlugin({
             compilationSuccessInfo: {
-                messages: [`Your application is running here: http://localhost:3000`],
+                messages: [`Your application is running here: http://localhost:8088`],
             },
             // onErrors: function (severity, errors) {
             // },

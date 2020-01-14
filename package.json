@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development webpack-dev-server --progress --config build/webpack.dev.js --open",
+    "dev": "NODE_ENV=development webpack-dev-server --progress --config build/webpack.dev.js",
     "build": "webpack --config build/webpack.prod.js",
     "dll": "webpack --config build/webpack.dll.config.js",
     "analyz": "NODE_ENV=production npm_config_report=true npm run build",

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hello :msg="msg" @bindSend="handle" />
+    no
   </div>
 </template>
 
